@@ -3,7 +3,7 @@
     "id": "1",
     "name": "Allen Raymond",
     "email": "nulla.ante@vestibul.co.uk",
-    "phone": "(992) 914-3792"
+    "phone": "(111) 11-11-111"
   },
   {
     "id": "2",
@@ -58,5 +58,17 @@
     "name": "Alec Howard",
     "email": "Donec.elementum@scelerisquescelerisquedui.net",
     "phone": "(748) 206-2688"
+  },
+  {
+    "id": "7591a045-93d8-44d6-b1b7-a8f25166a40d",
+    "name": "Viktor Bey",
+    "email": "beychuk.v.a@gmail.com",
+    "phone": "(067) 77-77-777"
+  },
+  {
+    "id": "6862ff44-cb5c-4ec6-97f1-24e7af91179e",
+    "name": "New Test",
+    "email": "test@gmail.com",
+    "phone": "8888888888"
   }
 ]
