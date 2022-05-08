@@ -1,4 +1,4 @@
-const { createError } = require("../../helpers");
+const createError = require("http-errors");
 const { User } = require("../../models/user");
 
 const register = async (req, res) => {
