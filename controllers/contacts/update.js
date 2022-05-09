@@ -5,6 +5,7 @@ const { Contact } = require("../../models/contact");
 const update = async (req, res) => {
   const { contactId } = req.params;
   const { body } = req;
+  const { _id } = req.user;
 
   if (body.constructor === Object && Object.keys(body).length === 0) {
     throw createError(400, "missing fields");
@@ -13,7 +14,11 @@ const update = async (req, res) => {
   if (!isValid) {
     throw createError(404);
   }
-  const result = await Contact.findByIdAndUpdate(contactId, body, {
+  const contact = await Contact.findOne({ owner: _id, _id: contactId });
+  if (!contact) {
+    throw createError(404);
+  }
+  const result = await Contact.findByIdAndUpdate(contact._id, body, {
     new: true,
   });
   if (!result) {

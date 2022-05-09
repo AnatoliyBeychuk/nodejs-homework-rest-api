@@ -18,7 +18,6 @@ const contactSchema = Schema(
       type: String,
       required: true,
       match: [phoneRegexp, "example: (067)777-77-77"],
-      unique: true,
     },
     favorite: {
       type: Boolean,
@@ -27,6 +26,7 @@ const contactSchema = Schema(
     owner: {
       type: Schema.Types.ObjectId,
       ref: "user",
+      required: true,
     },
   },
   { versionKey: false, timestamps: true }
